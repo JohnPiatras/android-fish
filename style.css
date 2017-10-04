@@ -1,0 +1,121 @@
+div{margin:0; padding:0;}
+div div {background: #A4CA39;position:relative;}
+
+.fish{
+  width:404px;
+  height:334px;
+  border:1px solid black;
+  margin:0 auto;
+}
+
+.head{
+  width:150px;height:100px;
+  top:32px;
+  border-top-left-radius:150px 100px;
+  transition: all 0.1s ease-in;
+}
+
+.eye{
+  width:20px;height:20px;
+  background: #fff;
+  border-radius:10px;
+  position:abolute;
+  top:50px;
+  left:35px;
+
+}
+
+
+.eye:hover{
+  height:6px;
+  top:60px;
+  border-top-left-radius:10px 3px;
+  border-top-right-radius:10px 3px;
+  border-bottom-left-radius:10px 3px;
+  border-bottom-right-radius:10px 3px;
+}
+
+.mouth{
+  width:150px;height:100px;
+  top:33px;
+  border-bottom-left-radius:150px 100px;
+
+}
+
+.mouth:hover{
+  transform:rotate(-10deg) translate(8px,13px);
+}
+
+.body{
+  width:202px;
+  height:201px;
+  top:0px;
+  left:150px;
+  position:absolute;
+  border-top-right-radius:202px 100px;
+  border-bottom-right-radius:202px 100px;
+}
+
+.dorsal-fin{
+  position:absolute;
+  width:100px;
+  height:30px;
+  top:-16px;
+  border-top-left-radius:100px 25px;
+  border-top-right-radius:5px 25px;
+}
+
+.ventral-fin{
+  position:absolute;
+  width:30px;
+  height:50px;
+  bottom:-40px;
+  border-bottom-left-radius:30px 50px;
+  transform:rotate(-5deg);
+  transform-origin:100% 0%;
+
+}
+.ventral-fin:hover {
+		animation-name:fin-wiggle;
+		animation-duration: 0.1s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+}
+
+.tail{
+  position:absolute;
+  width:100px;height:100px;
+  right:-95px;
+  top:50px;
+  border-top-left-radius:100px 50px;
+  border-bottom-left-radius:100px 50px;
+  border-top-right-radius:25px 50px;
+  border-bottom-right-radius:25px 50px;
+  transform-origin:0% 50%;
+}
+
+.tail:hover {
+		animation-name:tail-wiggle;
+		animation-duration: 0.1s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+}
+@keyframes tail-wiggle {
+	    0% {transform:rotate(-5deg);}
+		50% {transform:rotate(0deg);}
+		100% {transform:rotate(5deg);}
+		/*from {background-color: red;}*/
+		/*to {background-color: yellow;}*/
+}
+
+@keyframes fin-wiggle {
+	    0% {transform:rotate(-5deg);}
+		50% {transform:rotate(-10deg);}
+		100% {transform:rotate(-15deg);}
+		/*from {background-color: red;}*/
+		/*to {background-color: yellow;}*/
+}
+
